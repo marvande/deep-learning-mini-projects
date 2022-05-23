@@ -1,0 +1,29 @@
+% Please add the following required packages to your document preamble:
+% \usepackage{multirow}
+\begin{table}[]
+\centering
+\begin{tabular}{|llcccc|}
+\hline
+\textbf{Model}                                            & \textbf{Measure}            & \multicolumn{1}{l}{\textbf{Accuracy}} & \multicolumn{1}{l}{\textbf{F1}} & \multicolumn{1}{l}{\textbf{Cipher Accuracy}} & \multicolumn{1}{l|}{\textbf{Loss}} \\ \hline
+\multirow{2}{*}{\textbf{Baseline}}               & Mean            & 76.74                        & 78.94                  & -                                   & 0.0110                    \\
+                                                 & Std & 1.3055                       & 1.4073                 & -                                   & 0.0009                    \\ \hline
+\multirow{2}{*}{\textbf{Linear Siamese Model 1}} & Mean            & 75.08                        & 77.67                  & -                                   & 0.0086                    \\
+                                                 & Std & 1.5664                       & 1.3844                 & -                                   & 0.0005                    \\ \hline
+\multirow{2}{*}{\textbf{Linear Siamese Model 2}} & Mean            & 75.58                        & 78.16                  & -                                   & 0.0084                    \\
+                                                 & Std & 1.5747                       & 1.4938                 & -                                   & 0.0007                    \\ \hline
+\multirow{2}{*}{\textbf{Siamese CNN 1}}          & Mean            & 75.38                        & 76.75                  & -                                   & 0.0088                    \\
+                                                 & Std & 1.6067                       & 2.2532                 & -                                   & 0.0004                    \\ \hline
+\multirow{2}{*}{\textbf{Siamese CNN 2}}          & Mean            & 77.67                        & 79.79                  & -                                   & 0.0083                    \\
+                                                 & Std & 1.5441                       & 1.1749                 & -                                   & 0.0007                    \\ \hline
+\multirow{2}{*}{\textbf{Siamese CNN 3}}          & Mean            & 81.03                        & 82.56                  & 79.01                               & 0.0243                    \\
+                                                 & Std & 2.9799                       & 3.1201                 & 4.8458                              & 0.0031                    \\ \hline
+\multirow{2}{*}{\textbf{Siamese RNN 1}}          & Mean            & 71.40                        & 74.17                  & 50.85                               & 0.0432                    \\
+                                                 & Std & 2.0244                       & 1.2061                 & 0.5553                              & 0.0013                    \\ \hline
+\multirow{2}{*}{\textbf{Siamese RNN 2}}          & Mean            & 71.42                        & 74.23                  & 58.25                               & 0.0501                    \\
+                                                 & Std & 2.0670                       & 2.4225                 & 3.5251                              & 0.0020                    \\ \hline
+\multirow{2}{*}{\textbf{Best Model}}             & Mean            & 85.77                        & 86.98                  & 91.92                               & 0.0184                    \\
+                                                 & Std & 0.7655                       & 0.5811                 & 0.5618                              & 0.0019                    \\ \hline
+\end{tabular}
+\caption{Performance of all models explored in this report. Performance was assessed after 50 epochs for all except CCN models (Siamese CNN 1,2,3 and best model) which were run for 100 epochs for by averaging results on the test sets over 10 runs with randomly chosen training and test sets.}
+\label{tab:final-table}
+\end{table}
